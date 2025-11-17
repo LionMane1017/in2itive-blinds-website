@@ -1,0 +1,9 @@
+# robots.txt for Wise Media I.T. Consultancy
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://wisemedia.com/sitemap.xml
+
+# Disallow admin or private areas (if any in future)
+# Disallow: /admin/
