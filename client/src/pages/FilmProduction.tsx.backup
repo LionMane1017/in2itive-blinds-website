@@ -1,0 +1,593 @@
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { AlertTriangle, Shield, FileText, CheckCircle, XCircle, ArrowRight, Film, Building2 } from "lucide-react";
+import { Link } from "wouter";
+
+export default function FilmProduction() {
+  return (
+    <>
+      <SEO 
+        title="Film Production & Commercial Window Coverings - In2itive Blinds"
+        description="Professional corded window coverings exclusively for film, television, and commercial production. Not available for residential use due to Canadian child safety regulations."
+        keywords="film production blinds, commercial window coverings, corded blinds film industry, professional window treatments"
+      />
+      
+      <div className="min-h-screen">
+        {/* Alert Banner */}
+        <div className="bg-amber-50 border-b-4 border-amber-500 py-6">
+          <div className="container">
+            <div className="flex items-start gap-4 max-w-5xl mx-auto">
+              <AlertTriangle className="h-8 w-8 text-amber-600 flex-shrink-0 mt-1" />
+              <div>
+                <h2 className="text-2xl font-bold text-amber-900 mb-2">Commercial Use Only - Legal Notice</h2>
+                <p className="text-lg text-amber-800">
+                  This section is <strong>EXCLUSIVELY</strong> for verified film, television, and commercial production professionals. These products are <strong>NOT available for residential or consumer purchase</strong> under Canadian law.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+          <div className="container">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex justify-center mb-6">
+                <Film className="h-16 w-16 text-primary" />
+              </div>
+              <h1 className="text-5xl font-bold mb-6">Film Production & Commercial Division</h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                Traditional corded window coverings for professional film, television, and commercial production environments. Authentic aesthetics for your visual storytelling needs.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Legal Compliance Section */}
+        <section className="py-20 bg-background">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <Shield className="h-12 w-12 text-red-600 mx-auto mb-4" />
+                <h2 className="text-3xl font-bold mb-4">Understanding Canadian Child Safety Regulations</h2>
+                <p className="text-lg text-muted-foreground">
+                  Why we must strictly enforce commercial-only sales of corded window coverings
+                </p>
+              </div>
+
+              <Card className="border-red-200 bg-red-50/50 mb-8">
+                <CardHeader>
+                  <CardTitle className="text-red-900 flex items-center gap-2">
+                    <AlertTriangle className="h-6 w-6" />
+                    Critical Safety Information
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-red-900">
+                  <div className="grid md:grid-cols-3 gap-6 mb-6">
+                    <div className="text-center p-4 bg-white rounded-lg border border-red-200">
+                      <div className="text-4xl font-bold mb-2">39</div>
+                      <div className="text-sm">Child deaths in Canada (1989-2018) from cord strangulation</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg border border-red-200">
+                      <div className="text-4xl font-bold mb-2">22cm</div>
+                      <div className="text-sm">Length of cord that can strangle a child</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg border border-red-200">
+                      <div className="text-4xl font-bold mb-2">6 min</div>
+                      <div className="text-sm">Time to death from strangulation</div>
+                    </div>
+                  </div>
+                  <p className="font-semibold">
+                    The Corded Window Coverings Regulations (SOR/2019-97) came into force on May 1, 2021, making it illegal to sell corded window coverings to consumers for residential use in Canada.
+                  </p>
+                  <p>
+                    Children between 1 and 3 years old are most at risk. Strangulation can occur in as little as 15 seconds, causing unconsciousness. Brain damage occurs within 4 minutes, and death within 6 minutes.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <FileText className="h-6 w-6 text-primary" />
+                      The Legal Framework
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-muted-foreground">
+                      Under the <strong>Canada Consumer Product Safety Act</strong> and the <strong>Corded Window Coverings Regulations (SOR/2019-97)</strong>:
+                    </p>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2">
+                        <XCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                        <span>Corded blinds CANNOT be sold to consumers for residential use</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <XCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                        <span>Accessible cords cannot exceed 22cm in length</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <XCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                        <span>Cord loops cannot exceed 44cm in perimeter</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <span><strong>EXEMPTION:</strong> Products sold exclusively to commercial entities for commercial purposes</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Building2 className="h-6 w-6 text-primary" />
+                      Commercial Exemption
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-muted-foreground">
+                      According to Health Canada's official guidance:
+                    </p>
+                    <blockquote className="border-l-4 border-primary pl-4 italic bg-muted/50 p-4 rounded">
+                      "Corded window coverings sold exclusively to commercial entities for commercial purposes are not subject to the Regulations"
+                    </blockquote>
+                    <p className="text-sm text-muted-foreground">
+                      <strong>Film and television production qualifies as commercial use</strong> because productions are commercial entities using the products for professional purposes in controlled environments.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <Card className="border-blue-200 bg-blue-50/50">
+                <CardHeader>
+                  <CardTitle className="text-blue-900">Official Legal References</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-2 text-sm">
+                  <div>
+                    <strong>Corded Window Coverings Regulations (SOR/2019-97)</strong>
+                    <br />
+                    <a href="https://laws-lois.justice.gc.ca/eng/regulations/SOR-2019-97/" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">
+                      laws-lois.justice.gc.ca/eng/regulations/SOR-2019-97/
+                    </a>
+                  </div>
+                  <div>
+                    <strong>Health Canada - Window Covering Safety</strong>
+                    <br />
+                    <a href="https://www.canada.ca/en/health-canada/services/home-safety/blind-cord-safety.html" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">
+                      canada.ca/en/health-canada/services/home-safety/blind-cord-safety.html
+                    </a>
+                  </div>
+                  <div>
+                    <strong>Industry Guidance - Scope of Regulations</strong>
+                    <br />
+                    <a href="https://www.canada.ca/en/health-canada/services/consumer-product-safety/reports-publications/industry-professionals/corded-window-coverings-regulations/scope.html" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">
+                      canada.ca/.../corded-window-coverings-regulations/scope.html
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Film Industry Needs Corded Blinds */}
+        <section className="py-20 bg-muted/50">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">Why Film Production Requires Traditional Corded Blinds</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Aesthetic Authenticity</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Traditional appearance essential for period pieces and historical accuracy</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Cords and chains provide visual interest and natural movement on camera</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Familiar aesthetic that audiences expect to see in residential scenes</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Cordless mechanisms can appear bulky or modern in close-up shots</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Production Practicality</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Precise positioning control for specific camera angles and lighting</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Can be operated from off-camera positions by crew members</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>More durable for repeated adjustments during multiple takes</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Simpler mechanism means fewer on-set malfunctions</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Commercial Verification Requirements */}
+        <section className="py-20 bg-background">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-4">Commercial Verification Requirements</h2>
+              <p className="text-center text-lg text-muted-foreground mb-12">
+                To comply with Canadian law, we must verify all purchases are for legitimate commercial use
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <Card className="border-green-200 bg-green-50/50">
+                  <CardHeader>
+                    <CardTitle className="text-green-900 flex items-center gap-2">
+                      <CheckCircle className="h-6 w-6" />
+                      Eligible Commercial Buyers
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3 text-green-900">
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                        <span>Film production companies</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                        <span>Television studios and networks</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                        <span>Commercial photography studios</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                        <span>Set design and decoration companies</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                        <span>Theatre production companies</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                        <span>Commercial property decorators</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-red-200 bg-red-50/50">
+                  <CardHeader>
+                    <CardTitle className="text-red-900 flex items-center gap-2">
+                      <XCircle className="h-6 w-6" />
+                      NOT Eligible for Purchase
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3 text-red-900">
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                        <span>Individual consumers / homeowners</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                        <span>Residential installations of any kind</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                        <span>Home-based businesses or home offices</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                        <span>Rental properties or vacation homes</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                        <span>Daycare centers or schools</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-red-600 rounded-full"></div>
+                        <span>Any location accessible to children</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Required Documentation for Purchase</CardTitle>
+                  <CardDescription>All of the following must be provided before order processing</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                      <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">1</div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Business Registration Verification</h4>
+                        <p className="text-sm text-muted-foreground">Valid business registration number, incorporation documents, or business license</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                      <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">2</div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Company Letterhead Request</h4>
+                        <p className="text-sm text-muted-foreground">Purchase request on official company letterhead stating commercial purpose</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                      <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">3</div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Commercial Use Attestation</h4>
+                        <p className="text-sm text-muted-foreground">Signed declaration that products will be used exclusively for commercial/professional purposes</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                      <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">4</div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Project Information</h4>
+                        <p className="text-sm text-muted-foreground">Brief description of production/project where products will be used</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                      <div className="flex-shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">5</div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Commercial Invoice Address</h4>
+                        <p className="text-sm text-muted-foreground">Business address for invoicing (no residential addresses accepted)</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Product Offerings */}
+        <section className="py-20 bg-muted/50">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-4">Available Products for Film Production</h2>
+              <p className="text-center text-lg text-muted-foreground mb-12">
+                Traditional corded window coverings with authentic appearance for professional use
+              </p>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Corded Roller Shades</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
+                      Classic pull-cord operation with chain or cord control. Available in blackout, light-filtering, and sheer fabrics.
+                    </p>
+                    <ul className="text-sm space-y-1">
+                      <li>• Traditional bead chain operation</li>
+                      <li>• Custom sizes available</li>
+                      <li>• Multiple fabric options</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Chain-Operated Venetian Blinds</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
+                      Horizontal blinds with chain tilt and lift mechanisms. Available in wood, faux wood, and aluminum.
+                    </p>
+                    <ul className="text-sm space-y-1">
+                      <li>• Classic chain control</li>
+                      <li>• Precise slat positioning</li>
+                      <li>• Authentic traditional look</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Corded Vertical Blinds</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
+                      Traditional cord-operated vertical blinds ideal for large windows and patio door scenes.
+                    </p>
+                    <ul className="text-sm space-y-1">
+                      <li>• Cord tilt and traverse</li>
+                      <li>• Fabric or vinyl vanes</li>
+                      <li>• Commercial-grade hardware</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Pull-Cord Drapery</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
+                      Custom drapery with traditional cord-operated traverse rods for elegant window treatments.
+                    </p>
+                    <ul className="text-sm space-y-1">
+                      <li>• Cord-operated traverse systems</li>
+                      <li>• Custom fabric selection</li>
+                      <li>• Professional installation</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Roman Shades with Cords</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
+                      Traditional corded Roman shades with classic fold patterns and elegant appearance.
+                    </p>
+                    <ul className="text-sm space-y-1">
+                      <li>• Pull-cord operation</li>
+                      <li>• Multiple fold styles</li>
+                      <li>• Custom fabrics available</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Pleated Shades</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
+                      Corded pleated shades with traditional operation for versatile light control.
+                    </p>
+                    <ul className="text-sm space-y-1">
+                      <li>• Cord lift system</li>
+                      <li>• Light-filtering options</li>
+                      <li>• Compact when raised</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bilingual Safety Warning */}
+        <section className="py-12 bg-red-600 text-white">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">⚠️ WARNING</h3>
+                  <p className="font-semibold mb-2">STRANGULATION HAZARD</p>
+                  <p>
+                    Young children can be strangled by cords. This product is for commercial/professional use only and must not be installed in any location accessible to children. Immediately remove this product if a cord longer than 22 cm or a loop exceeding 44 cm becomes accessible.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">⚠️ MISE EN GARDE</h3>
+                  <p className="font-semibold mb-2">RISQUE D'ÉTRANGLEMENT</p>
+                  <p>
+                    Les enfants en bas âge peuvent s'étrangler avec des cordes. Ce produit est destiné à un usage commercial/professionnel uniquement et ne doit pas être installé dans un endroit accessible aux enfants. Enlevez immédiatement ce produit si une corde mesurant plus de 22 cm ou si le contour d'une boucle de plus de 44 cm devient accessible.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Residential Customer Redirect */}
+        <section className="py-20 bg-background">
+          <div className="container">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6">Looking for Blinds for Your Home?</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                If you're a residential customer, we have a comprehensive selection of safe, compliant, and beautiful window treatments designed specifically for homes.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Cordless Options</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      Safe, modern designs with no exposed cords. Perfect for homes with children.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Motorized Solutions</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      Smart home integration with voice and app control. Ultimate convenience and safety.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Compliant Designs</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      All residential products meet Canadian safety standards for peace of mind.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/">
+                  <Button size="lg" variant="default" className="gap-2">
+                    View Residential Products
+                    <ArrowRight className="h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href="/products/motorization">
+                  <Button size="lg" variant="outline" className="gap-2">
+                    Explore Motorized Options
+                    <ArrowRight className="h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact for Commercial Inquiries */}
+        <section className="py-20 bg-primary text-primary-foreground">
+          <div className="container text-center">
+            <h2 className="text-4xl font-bold mb-4">Ready to Discuss Your Production Needs?</h2>
+            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+              Contact our Commercial Division to verify your eligibility and discuss your project requirements
+            </p>
+            <Link href="/contact-sales">
+              <Button size="lg" variant="secondary" className="gap-2">
+                Contact Commercial Division
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </Link>
+            <p className="mt-6 text-sm opacity-75">
+              Please have your business documentation ready for verification
+            </p>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}

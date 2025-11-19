@@ -46,21 +46,39 @@ export const appRouter = router({
       }),
   }),
   
-  // Voice Assistant API Key
+  // Voice Assistant API Key and Knowledge Base
   voiceAssistant: router({
     getApiKey: publicProcedure
       .query(() => {
-        // Try both VITE_ prefixed and non-prefixed versions
-        const apiKey = process.env.GOOGLE_AI_API_KEY || process.env.VITE_GOOGLE_AI_API_KEY;
-        console.log('[Backend] Checking for API key...');
-        console.log('[Backend] GOOGLE_AI_API_KEY exists:', !!process.env.GOOGLE_AI_API_KEY);
-        console.log('[Backend] VITE_GOOGLE_AI_API_KEY exists:', !!process.env.VITE_GOOGLE_AI_API_KEY);
+        // Use OpenAI API key from environment
+        const apiKey = process.env.OPENAI_API_KEY;
+        console.log('[Backend] Checking for OpenAI API key...');
+        console.log('[Backend] OPENAI_API_KEY exists:', !!process.env.OPENAI_API_KEY);
         if (!apiKey) {
-          console.error('[Backend] No API key found in environment variables');
-          throw new Error('Google AI API key not configured on server');
+          console.error('[Backend] No OpenAI API key found in environment variables');
+          throw new Error('OpenAI API key not configured on server');
         }
-        console.log('[Backend] API key found, returning to client');
+        console.log('[Backend] OpenAI API key found, returning to client');
         return { apiKey };
+      }),
+    
+    getKnowledgeBase: publicProcedure
+      .query(async () => {
+        // Load knowledge base from JSON file
+        const fs = await import('fs/promises');
+        const path = await import('path');
+        
+        try {
+          const kbPath = path.join(process.cwd(), 'server', 'knowledge-base.json');
+          const kbContent = await fs.readFile(kbPath, 'utf-8');
+          const knowledgeBase = JSON.parse(kbContent);
+          
+          console.log('[Backend] Knowledge base loaded successfully');
+          return { knowledgeBase };
+        } catch (error) {
+          console.error('[Backend] Failed to load knowledge base:', error);
+          throw new Error('Knowledge base not available');
+        }
       }),
   }),
   

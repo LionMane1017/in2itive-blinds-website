@@ -268,7 +268,7 @@ const WiseWareAssistant = ({ onClose }: WiseWareAssistantProps = {}) => {
           className="flex-1 p-4 overflow-y-auto bg-transparent space-y-3"
         >
           {transcripts.length === 0 && (
-            <div className="text-center text-white py-8">
+            <div className="text-center text-foreground dark:text-white py-8">
               <p className="text-sm">Click the microphone to start a voice conversation</p>
               <p className="text-xs mt-2">Ask about infrastructure costs, ROI, or our services</p>
             </div>
@@ -287,7 +287,7 @@ const WiseWareAssistant = ({ onClose }: WiseWareAssistantProps = {}) => {
                 className={`max-w-[80%] rounded-lg p-3 ${
                   entry.speaker === 'user'
                     ? 'bg-blue-500/80 text-white'
-                    : 'bg-white/20 text-white'
+                    : 'bg-white/20 backdrop-blur-md text-foreground dark:text-white'
                 } ${!entry.isFinal ? 'opacity-70' : ''}`}
               >
                 <p className="text-sm whitespace-pre-wrap">{entry.text}</p>
@@ -305,11 +305,11 @@ const WiseWareAssistant = ({ onClose }: WiseWareAssistantProps = {}) => {
         <footer className="p-4 border-t border-white/20 bg-transparent">
           <div className="flex flex-col items-center gap-3">
             <div className="text-sm text-center">
-              <p className={`font-medium ${status === 'error' ? 'text-red-300' : 'text-white'}`}>
+              <p className={`font-medium ${status === 'error' ? 'text-red-500 dark:text-red-300' : 'text-foreground dark:text-white'}`}>
                 {statusText[status]}
               </p>
               {errorMessage && (
-                <p className="text-xs text-red-300 mt-1">{errorMessage}</p>
+                <p className="text-xs text-red-500 dark:text-red-300 mt-1">{errorMessage}</p>
               )}
             </div>
             
@@ -330,7 +330,7 @@ const WiseWareAssistant = ({ onClose }: WiseWareAssistantProps = {}) => {
               )}
             </button>
             
-            <p className="text-xs text-white/80 text-center">
+            <p className="text-xs text-muted-foreground dark:text-white/80 text-center">
               {isSessionActive ? 'Click to stop' : 'Click to start voice chat'}
             </p>
           </div>

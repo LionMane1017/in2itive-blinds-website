@@ -4,24 +4,24 @@ import { Button } from "@/components/ui/button";
 
 const slides = [
   {
-    image: "/images/hero_slider_1.jpg",
-    title: "Infrastructure Excellence",
-    subtitle: "Modern data center solutions for enterprise growth"
+    image: "/images/hero/hero1.jpg",
+    title: "Transform Your Space",
+    subtitle: "Premium custom blinds and window coverings for every room"
   },
   {
-    image: "/images/hero_slider_2.jpg",
-    title: "Substantial Cost Savings",
-    subtitle: "Achieve rapid ROI by eliminating recurring cloud expenses"
+    image: "/images/hero/hero2.jpg",
+    title: "Smart Home Integration",
+    subtitle: "Motorized blinds with seamless control from your phone or voice"
   },
   {
-    image: "/images/hero_slider_3.jpg",
-    title: "Cloud Cost Optimization",
-    subtitle: "Break free from vendor lock-in"
+    image: "/images/hero/hero3.jpg",
+    title: "Energy Efficiency",
+    subtitle: "Save on heating and cooling with insulating window treatments"
   },
   {
-    image: "/images/hero_slider_4.jpg",
-    title: "Micro Server Cluster",
-    subtitle: "Enterprise reliability at fraction of the cost"
+    image: "/images/hero/hero4.jpg",
+    title: "Ontario's Trusted Provider",
+    subtitle: "Free in-home consultation and professional installation"
   }
 ];
 

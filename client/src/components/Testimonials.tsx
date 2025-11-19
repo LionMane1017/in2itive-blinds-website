@@ -4,39 +4,39 @@ import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
-    quote: "Switching to owned infrastructure reduced our cloud costs by 73% in the first year. The ROI was even faster than projected.",
+    quote: "In2itive Blinds transformed our home with beautiful motorized roller shades. The installation was flawless and the smart home integration works perfectly!",
     author: "Sarah Chen",
-    title: "VP of Infrastructure",
-    company: "TechFlow Solutions",
-    logo: "🏢" // Placeholder - replace with actual logo
+    title: "Homeowner",
+    company: "Toronto, ON",
+    logo: "🏡"
   },
   {
-    quote: "We eliminated vendor lock-in and gained complete control over our infrastructure. The cost savings have been transformational for our bottom line.",
+    quote: "We needed custom blinds for our entire office building. In2itive delivered premium quality on time and within budget. Highly recommended!",
     author: "Michael Rodriguez",
-    title: "CTO",
-    company: "DataSync Corp",
-    logo: "🏛️" // Placeholder - replace with actual logo
+    title: "Facilities Manager",
+    company: "Markham Business Center",
+    logo: "🏢"
   },
   {
-    quote: "The payback period was just 8 months. Now we're saving over $50,000 annually while maintaining enterprise-grade reliability.",
+    quote: "The honeycomb shades have made a noticeable difference in our energy bills. Plus they look amazing! Best investment we've made for our home.",
     author: "Jennifer Park",
-    title: "Director of IT Operations",
-    company: "CloudScale Industries",
-    logo: "🏭" // Placeholder - replace with actual logo
+    title: "Homeowner",
+    company: "Mississauga, ON",
+    logo: "🏠"
   },
   {
-    quote: "Our infrastructure costs dropped 68% after migrating to owned servers. The performance improvements were an unexpected bonus.",
+    quote: "Professional service from start to finish. The free consultation helped us choose the perfect blinds for each room. Couldn't be happier!",
     author: "David Thompson",
-    title: "Chief Technology Officer",
-    company: "InnovateTech Group",
-    logo: "🏢" // Placeholder - replace with actual logo
+    title: "Homeowner",
+    company: "Oakville, ON",
+    logo: "🏡"
   },
   {
-    quote: "We achieved full infrastructure ownership in under a year. The annual savings now fund our entire R&D department.",
+    quote: "In2itive's outdoor awnings and screens have completely transformed our patio. We can now enjoy our outdoor space all summer long!",
     author: "Lisa Martinez",
-    title: "VP of Engineering",
-    company: "NextGen Systems",
-    logo: "🏛️" // Placeholder - replace with actual logo
+    title: "Homeowner",
+    company: "Burlington, ON",
+    logo: "🏠"
   }
 ];
 
@@ -67,7 +67,7 @@ export default function Testimonials() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">What Our Clients Say</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Hear from enterprise leaders who transformed their infrastructure economics
+            Hear from satisfied customers across Ontario who love their new window treatments
           </p>
         </div>
 

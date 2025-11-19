@@ -1,204 +1,251 @@
 import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Mail, Phone, MapPin, Globe, CheckCircle } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Award, Users, Heart, Zap, Shield, ArrowRight, Check } from "lucide-react";
+import { Link } from "wouter";
 
 export default function About() {
   return (
-      <>
+    <>
       <SEO 
-        title="About Wise Media I.T. Consultancy"
-        description="Professional IT consultancy specializing in infrastructure optimization and cloud cost reduction strategies."
-        keywords="IT consultancy, infrastructure consulting, cloud optimization"
+        title="About In2itive Blinds - Premium Window Coverings Ontario"
+        description="Learn about In2itive Blinds, Ontario's trusted provider of custom blinds and window coverings. Quality products, expert installation, exceptional service."
+        keywords="about In2itive Blinds, window coverings Ontario, blinds company, custom blinds installer"
       />
-      <div className="min-h-screen py-12 bg-background">
-      <div className="container max-w-6xl">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">About Wise Media</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Your trusted partner for digital transformation and infrastructure innovation
-          </p>
-        </div>
+      
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-primary text-primary-foreground py-20">
+          <div className="container">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">About In2itive Blinds</h1>
+              <p className="text-xl opacity-90">
+                More than just window coverings—we're your partner in transforming spaces.
+              </p>
+            </div>
+          </div>
+        </section>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Digital Business Card Embed */}
-          <Card className="overflow-hidden">
-            <CardHeader className="bg-background/60 backdrop-blur-sm border-border/40">
-              <CardTitle className="flex items-center gap-2">
-                <Globe className="h-6 w-6" />
-                Connect With Us
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-0">
-              <div className="h-[850px]">
-                <iframe
-                  src="https://id.mywisemedia.com"
-                  className="w-full h-full border-0"
-                  title="Wise Media Digital Business Card"
-                  loading="lazy"
+        {/* Our Story */}
+        <section className="py-20 bg-background">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+                <div className="space-y-4 text-muted-foreground">
+                  <p>
+                    In2itive Blinds was founded with a simple mission: to provide Ontario homeowners and businesses with premium window treatments that combine style, functionality, and value. We believe that the right window coverings can completely transform a space, enhancing both its aesthetic appeal and practical comfort.
+                  </p>
+                  <p>
+                    What sets us apart is our commitment to understanding each client's unique needs. We don't just sell blinds—we create customized solutions that reflect your personal style, meet your functional requirements, and fit your budget. From the initial consultation to professional installation and beyond, we're with you every step of the way.
+                  </p>
+                  <p>
+                    Today, we're proud to serve residential and commercial clients across Ontario, offering an extensive range of products from classic designs to cutting-edge motorized solutions. Our partnerships with industry leaders like Somfy, Lutron, and Hunter Douglas ensure you receive the highest quality products backed by comprehensive warranties.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img 
+                  src="/images/hero/hero2.jpg" 
+                  alt="In2itive Blinds Showroom" 
+                  className="rounded-lg shadow-2xl w-full"
                 />
               </div>
-              <div className="p-6 bg-muted/30">
-                <Button asChild className="w-full" size="lg">
-                  <a href="https://id.mywisemedia.com" target="_blank" rel="noopener noreferrer">
-                    View Full Digital Card
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* About Content */}
-          <div className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Our Mission</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg leading-relaxed text-muted-foreground">
-                  At Wise Media, we're passionate about helping businesses build powerful digital presence through innovative infrastructure solutions and strategic technology consulting.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Leadership</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-primary-foreground text-2xl font-bold flex-shrink-0">
-                    CM
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">Christian McNeil</h3>
-                    <p className="text-primary font-medium mb-2">Digital Innovation Specialist</p>
-                    <p className="text-muted-foreground">
-                      Leading the charge in digital transformation strategy and infrastructure modernization for forward-thinking organizations.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-primary" />
-                  <a href="mailto:christian@mail.mywisemedia.com" className="hover:underline">
-                    christian@mail.mywisemedia.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <a href="tel:+14165551234" className="hover:underline">
-                    +1 (416) 555-1234
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <span>Brampton, ON, Canada</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Globe className="h-5 w-5 text-primary" />
-                  <a href="https://mywisemedia.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    mywisemedia.com
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+            </div>
           </div>
-        </div>
+        </section>
 
-        {/* Services Section */}
-        <Card className="mb-12">
-          <CardHeader>
-            <CardTitle className="text-2xl">Our Services</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+        {/* Our Values */}
+        <section className="py-20 bg-muted/50">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <Card className="p-8">
+                  <h3 className="text-xl font-bold mb-6">What We Stand For</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <strong className="block mb-1">Quality Excellence</strong>
+                        <span className="text-muted-foreground">We partner with premium manufacturers and use only the finest materials.</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <strong className="block mb-1">Customer First</strong>
+                        <span className="text-muted-foreground">Your satisfaction is our priority. We listen, guide, and deliver beyond expectations.</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div>
+                        <strong className="block mb-1">Local Expertise</strong>
+                        <span className="text-muted-foreground">Ontario-based with deep understanding of local climate and design preferences.</span>
+                      </div>
+                    </li>
+                  </ul>
+                </Card>
+
+                <Card className="p-8">
+                  <h3 className="text-xl font-bold mb-6">Service Area</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Proudly serving the Greater Toronto Area and surrounding regions throughout Ontario. Our mobile consultation service brings the showroom experience directly to your home.
+                  </p>
+                  <div className="flex items-center gap-2 text-primary font-medium">
+                    <Heart className="h-5 w-5" />
+                    <span>Serving Southern Ontario</span>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-20 bg-background">
+          <div className="container">
+            <h2 className="text-3xl font-bold text-center mb-12">Why Choose In2itive Blinds?</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Zap className="h-6 w-6 text-primary" />
+                  </div>
+                </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Digital Transformation Strategy</h3>
+                  <h3 className="font-semibold text-lg mb-2">Free In-Home Consultation</h3>
                   <p className="text-muted-foreground">
-                    Comprehensive roadmaps for modernizing your technology infrastructure and business processes
+                    Our design experts come to you with samples, measure your windows, and provide personalized recommendations—all at no cost.
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Shield className="h-6 w-6 text-primary" />
+                  </div>
+                </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Brand Identity & UI/UX Design</h3>
+                  <h3 className="font-semibold text-lg mb-2">Professional Installation</h3>
                   <p className="text-muted-foreground">
-                    Creating compelling visual identities and user experiences that drive engagement
+                    Our trained installers ensure perfect fit and flawless operation. We treat your home with respect and clean up completely when we're done.
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Award className="h-6 w-6 text-primary" />
+                  </div>
+                </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Web & Mobile App Development</h3>
+                  <h3 className="font-semibold text-lg mb-2">Quality Guarantee</h3>
                   <p className="text-muted-foreground">
-                    Full-stack development solutions tailored to your business objectives
+                    All our products come with comprehensive manufacturer warranties. We stand behind our work with our own satisfaction guarantee.
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Users className="h-6 w-6 text-primary" />
+                  </div>
+                </div>
                 <div>
-                  <h3 className="font-semibold text-lg">AI-Powered Automation Solutions</h3>
+                  <h3 className="font-semibold text-lg mb-2">Expert Design Advice</h3>
                   <p className="text-muted-foreground">
-                    Leveraging artificial intelligence to streamline operations and boost productivity
+                    Not sure what you need? Our experienced team will guide you through options, helping you make informed decisions for your space.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Zap className="h-6 w-6 text-primary" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Smart Home Integration</h3>
+                  <p className="text-muted-foreground">
+                    We specialize in motorized solutions that integrate seamlessly with Alexa, Google Home, and other smart home systems.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Heart className="h-6 w-6 text-primary" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Competitive Pricing</h3>
+                  <p className="text-muted-foreground">
+                    Premium quality doesn't have to mean premium prices. We offer competitive rates and flexible payment options.
                   </p>
                 </div>
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
-        {/* Testimonials */}
-        <div className="grid md:grid-cols-2 gap-6">
-          <Card className="bg-background/60 backdrop-blur-sm border-border/40">
-            <CardContent className="pt-6">
-              <p className="text-lg italic mb-4">
-                "Christian's strategic insights were pivotal in our digital transformation. The results have been phenomenal, boosting our online engagement by over 200%."
+        {/* Our Service Area */}
+        <section className="py-20 bg-muted/50">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6">Proudly Serving Ontario</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                We provide professional window covering services throughout Ontario, bringing our showroom to your home for your convenience. Whether you're in Toronto, Ottawa, Hamilton, London, or anywhere in between, we're here to help transform your space.
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-foreground/10 border border-border/40 flex items-center justify-center text-white font-bold">
-                  JD
-                </div>
-                <div>
-                  <div className="font-semibold">Jane Doe</div>
-                  <div className="text-sm text-muted-foreground">CEO of Innovate Corp</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              <p className="text-muted-foreground">
+                Our mobile consultation service means you can see our products in your own lighting, match them to your existing décor, and make confident decisions without leaving home.
+              </p>
+            </div>
+          </div>
+        </section>
 
-          <Card className="bg-background/60 backdrop-blur-sm border-border/40">
-            <CardContent className="pt-6">
-              <p className="text-lg italic mb-4">
-                "An exceptional partner for any business looking to navigate the complexities of modern technology. Highly recommended for their expertise and professionalism."
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-foreground/10 border border-border/40 flex items-center justify-center text-white font-bold">
-                  JS
-                </div>
-                <div>
-                  <div className="font-semibold">John Smith</div>
-                  <div className="text-sm text-muted-foreground">CTO at Tech Solutions Ltd.</div>
-                </div>
+        {/* Our Commitment */}
+        <section className="py-20 bg-background">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">Our Commitment to You</h2>
+              <div className="space-y-6 text-lg text-muted-foreground">
+                <p>
+                  At In2itive Blinds, we're committed to making your window treatment experience as smooth and enjoyable as possible. From your first inquiry to years after installation, we're here to support you.
+                </p>
+                <p>
+                  We believe in transparency—no hidden fees, no pressure sales tactics, just honest advice and fair pricing. We'll work within your budget to find solutions that meet your needs without compromising on quality.
+                </p>
+                <p>
+                  Our goal is simple: to create beautiful, functional window treatments that you'll love for years to come, backed by service that makes you want to recommend us to friends and family.
+                </p>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-primary text-primary-foreground">
+          <div className="container text-center">
+            <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+              Experience the In2itive Blinds difference. Schedule your free in-home consultation today.
+            </p>
+            <Link href="/contact-sales">
+              <Button size="lg" variant="secondary" className="gap-2">
+                Get Your Free Consultation
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </section>
       </div>
-    </div>
     </>
   );
 }

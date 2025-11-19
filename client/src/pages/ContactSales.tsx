@@ -3,16 +3,17 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Building2, Mail, Phone, DollarSign, Send, CheckCircle2 } from "lucide-react";
+import { Check, Send, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 import { SEO } from "@/components/SEO";
 
 export default function ContactSales() {
   const [formData, setFormData] = useState({
-    companyName: "",
+    name: "",
     email: "",
     phone: "",
-    cloudSpend: "",
+    address: "",
+    projectType: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,14 +28,15 @@ export default function ContactSales() {
       await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call
       
       setIsSubmitted(true);
-      toast.success("Thank you! We'll contact you within 24 hours.");
+      toast.success("Thank you! We'll contact you within 24 hours to schedule your free consultation.");
       
       // Reset form
       setFormData({
-        companyName: "",
+        name: "",
         email: "",
         phone: "",
-        cloudSpend: "",
+        address: "",
+        projectType: "",
         message: "",
       });
     } catch (error) {
@@ -44,7 +46,7 @@ export default function ContactSales() {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -54,129 +56,106 @@ export default function ContactSales() {
   return (
     <>
       <SEO
-        title="Contact Sales - Get a Custom Infrastructure Quote"
-        description="Contact our sales team for a personalized infrastructure assessment and ROI analysis. Learn how owned infrastructure can reduce your cloud costs by 60-80%."
-        keywords="contact sales, infrastructure quote, ROI analysis, cloud cost reduction, custom assessment"
+        title="Free Consultation - In2itive Blinds Ontario"
+        description="Get a free in-home consultation for custom window blinds, shades, and coverings in Ontario. Expert advice, professional measurement, and personalized recommendations."
+        keywords="free consultation, blinds quote, window covering estimate, in-home measurement, Ontario blinds"
       />
       
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-muted/30">
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="py-20 bg-muted/30">
+          <section className="py-20">
             <div className="container">
               <div className="max-w-3xl mx-auto text-center">
-                <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-                  Talk to Sales
-                </div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Get a Custom Infrastructure Assessment
+                  Get Your Free In-Home Consultation
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Speak with our infrastructure experts to discover how much you can save by transitioning from cloud providers to owned infrastructure.
+                  Our experts bring the showroom to you. Professional measurement, personalized recommendations, and a no-obligation quote.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Form Section */}
-          <section className="py-16">
-            <div className="container max-w-4xl">
-              <div className="grid md:grid-cols-2 gap-12">
-                {/* Left Column - Benefits */}
-                <div>
-                  <h2 className="text-2xl font-bold mb-6">What You'll Get</h2>
-                  
-                  <div className="space-y-6">
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <DollarSign className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-2">Custom ROI Analysis</h3>
-                        <p className="text-sm text-muted-foreground">
-                          Detailed breakdown of your potential savings, payback period, and 5-year TCO comparison.
-                        </p>
-                      </div>
+          {/* Form Section with Split Layout */}
+          <section className="pb-20">
+            <div className="container max-w-6xl">
+              {isSubmitted ? (
+                <Card className="p-12">
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <CheckCircle2 className="h-10 w-10 text-green-600" />
                     </div>
-
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <Building2 className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-2">Infrastructure Design</h3>
-                        <p className="text-sm text-muted-foreground">
-                          Tailored hardware recommendations based on your workload requirements and budget.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <CheckCircle2 className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-2">Migration Roadmap</h3>
-                        <p className="text-sm text-muted-foreground">
-                          Step-by-step plan for transitioning from cloud to owned infrastructure with minimal disruption.
-                        </p>
-                      </div>
-                    </div>
+                    <h3 className="text-3xl font-bold mb-4">Thank You!</h3>
+                    <p className="text-lg text-muted-foreground mb-8">
+                      We've received your request and will contact you within 24 hours to schedule your free consultation.
+                    </p>
+                    <Button onClick={() => setIsSubmitted(false)} size="lg">
+                      Submit Another Request
+                    </Button>
                   </div>
-
-                  <Card className="mt-8 p-6 bg-muted/50">
-                    <p className="text-sm text-muted-foreground mb-4">
-                      <strong>Average Response Time:</strong> 24 hours
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      <strong>Typical Savings:</strong> 60-80% reduction in infrastructure costs
-                    </p>
-                  </Card>
-                </div>
-
-                {/* Right Column - Form */}
-                <div>
-                  <Card className="p-8">
-                    {isSubmitted ? (
-                      <div className="text-center py-8">
-                        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <CheckCircle2 className="h-8 w-8 text-green-600" />
-                        </div>
-                        <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
-                        <p className="text-muted-foreground mb-6">
-                          We've received your inquiry and will contact you within 24 hours.
-                        </p>
-                        <Button onClick={() => setIsSubmitted(false)}>
-                          Submit Another Request
-                        </Button>
+                </Card>
+              ) : (
+                <Card className="overflow-hidden shadow-2xl">
+                  <div className="grid md:grid-cols-5">
+                    {/* Left Sidebar - Why Choose Us */}
+                    <div className="md:col-span-2 bg-primary p-10 text-primary-foreground flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-2xl font-bold mb-6">Why Choose Us?</h3>
+                        <ul className="space-y-6">
+                          <li className="flex items-start gap-3">
+                            <Check className="mt-1 flex-shrink-0 h-5 w-5" />
+                            <span>
+                              <strong className="block mb-1">Professional Measurement</strong>
+                              We take precise laser measurements to guarantee a perfect fit for every window.
+                            </span>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <Check className="mt-1 flex-shrink-0 h-5 w-5" />
+                            <span>
+                              <strong className="block mb-1">Expert Advice</strong>
+                              We help you navigate fabrics, opacities, lift systems, and smart home integration.
+                            </span>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <Check className="mt-1 flex-shrink-0 h-5 w-5" />
+                            <span>
+                              <strong className="block mb-1">All-In Pricing</strong>
+                              No hidden fees. Product, hardware, and professional installation all included.
+                            </span>
+                          </li>
+                        </ul>
                       </div>
-                    ) : (
+                      <div className="mt-12 pt-8 border-t border-primary-foreground/20">
+                        <p className="text-primary-foreground/80 text-sm mb-2">Have questions? Call us directly.</p>
+                        <p className="text-2xl font-bold">(555) 123-4567</p>
+                        <p className="text-sm text-primary-foreground/80 mt-1">info@in2itiveblinds.com</p>
+                      </div>
+                    </div>
+
+                    {/* Right Side - Form */}
+                    <div className="md:col-span-3 p-10">
                       <form onSubmit={handleSubmit} className="space-y-6">
-                        <div>
-                          <label htmlFor="companyName" className="block text-sm font-medium mb-2">
-                            Company Name *
-                          </label>
-                          <div className="relative">
-                            <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <label htmlFor="name" className="block text-sm font-medium mb-2">
+                              Full Name *
+                            </label>
                             <Input
-                              id="companyName"
-                              name="companyName"
+                              id="name"
+                              name="name"
                               type="text"
                               required
-                              value={formData.companyName}
+                              value={formData.name}
                               onChange={handleChange}
-                              className="pl-10"
-                              placeholder="Acme Corporation"
+                              placeholder="John Smith"
+                              className="h-12"
                             />
                           </div>
-                        </div>
-
-                        <div>
-                          <label htmlFor="email" className="block text-sm font-medium mb-2">
-                            Email Address *
-                          </label>
-                          <div className="relative">
-                            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                          <div>
+                            <label htmlFor="email" className="block text-sm font-medium mb-2">
+                              Email Address *
+                            </label>
                             <Input
                               id="email"
                               name="email"
@@ -184,54 +163,68 @@ export default function ContactSales() {
                               required
                               value={formData.email}
                               onChange={handleChange}
-                              className="pl-10"
-                              placeholder="you@company.com"
+                              placeholder="john@example.com"
+                              className="h-12"
                             />
                           </div>
                         </div>
 
-                        <div>
-                          <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                            Phone Number
-                          </label>
-                          <div className="relative">
-                            <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                              Phone Number *
+                            </label>
                             <Input
                               id="phone"
                               name="phone"
                               type="tel"
+                              required
                               value={formData.phone}
                               onChange={handleChange}
-                              className="pl-10"
-                              placeholder="+1 (555) 000-0000"
+                              placeholder="(555) 123-4567"
+                              className="h-12"
+                            />
+                          </div>
+                          <div>
+                            <label htmlFor="address" className="block text-sm font-medium mb-2">
+                              City / Area in Ontario
+                            </label>
+                            <Input
+                              id="address"
+                              name="address"
+                              type="text"
+                              value={formData.address}
+                              onChange={handleChange}
+                              placeholder="Toronto, Brampton, etc."
+                              className="h-12"
                             />
                           </div>
                         </div>
 
                         <div>
-                          <label htmlFor="cloudSpend" className="block text-sm font-medium mb-2">
-                            Current Monthly Cloud Spend
+                          <label htmlFor="projectType" className="block text-sm font-medium mb-2">
+                            Project Type
                           </label>
-                          <div className="relative">
-                            <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                            <Input
-                              id="cloudSpend"
-                              name="cloudSpend"
-                              type="text"
-                              value={formData.cloudSpend}
-                              onChange={handleChange}
-                              className="pl-10"
-                              placeholder="e.g., $5,000/month"
-                            />
-                          </div>
-                          <p className="text-xs text-muted-foreground mt-1">
-                            Helps us provide accurate savings estimates
-                          </p>
+                          <select
+                            id="projectType"
+                            name="projectType"
+                            value={formData.projectType}
+                            onChange={handleChange}
+                            className="w-full h-12 px-3 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                          >
+                            <option value="">Select a project type</option>
+                            <option value="residential">Residential (Home)</option>
+                            <option value="commercial">Commercial (Office/Business)</option>
+                            <option value="film-production">Film/TV Production (Commercial)</option>
+                            <option value="new-construction">New Construction</option>
+                            <option value="renovation">Renovation/Replacement</option>
+                            <option value="other">Other</option>
+                          </select>
                         </div>
 
                         <div>
                           <label htmlFor="message" className="block text-sm font-medium mb-2">
-                            Message
+                            How can we help?
                           </label>
                           <Textarea
                             id="message"
@@ -239,13 +232,13 @@ export default function ContactSales() {
                             value={formData.message}
                             onChange={handleChange}
                             rows={4}
-                            placeholder="Tell us about your infrastructure needs, challenges, or questions..."
+                            placeholder="I'm looking for motorized shades for my living room..."
                           />
                         </div>
 
                         <Button
                           type="submit"
-                          className="w-full"
+                          className="w-full h-12"
                           size="lg"
                           disabled={isSubmitting}
                         >
@@ -254,7 +247,7 @@ export default function ContactSales() {
                           ) : (
                             <>
                               <Send className="mr-2 h-4 w-4" />
-                              Request Consultation
+                              Request Free Consultation
                             </>
                           )}
                         </Button>
@@ -263,10 +256,10 @@ export default function ContactSales() {
                           By submitting this form, you agree to be contacted by our sales team.
                         </p>
                       </form>
-                    )}
-                  </Card>
-                </div>
-              </div>
+                    </div>
+                  </div>
+                </Card>
+              )}
             </div>
           </section>
         </main>

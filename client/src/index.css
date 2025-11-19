@@ -6,6 +6,15 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Backdrop blur utilities for glassmorphism */
+  --backdrop-blur-sm: blur(4px);
+  --backdrop-blur: blur(8px);
+  --backdrop-blur-md: blur(12px);
+  --backdrop-blur-lg: blur(16px);
+  --backdrop-blur-xl: blur(24px);
+  --backdrop-blur-2xl: blur(40px);
+  --backdrop-blur-3xl: blur(64px);
+  
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -176,6 +185,95 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism backdrop-blur utilities */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  /* Enhanced glassmorphism utility classes */
+  .glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-card-light {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
+  
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+  
+  .glass-button {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .glass-button:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .backdrop-blur {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .backdrop-blur-lg {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  
+  .backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+  
+  .backdrop-blur-2xl {
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  }
+  
+  .backdrop-blur-3xl {
+    backdrop-filter: blur(64px);
+    -webkit-backdrop-filter: blur(64px);
+  }
+  
+  /* Support for backdrop-filter feature detection */
+  @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+    .supports-\[backdrop-filter\]\:bg-background\/60 {
+      background-color: rgb(var(--background) / 0.6);
+    }
+    
+    .supports-\[backdrop-filter\]\:backdrop-blur {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
   }
 }
 

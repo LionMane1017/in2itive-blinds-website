@@ -1,0 +1,182 @@
+{
+  "company": {
+    "name": "In2itive Blinds",
+    "tagline": "Premium Window Coverings Ontario",
+    "description": "Ontario's premier provider of custom window blinds, shades, and coverings with factory-direct pricing and expert installation",
+    "service_area": "Serving all of Southern Ontario including Toronto, Mississauga, Brampton, Hamilton, Oakville, Burlington, Milton, and surrounding areas",
+    "established": "2010",
+    "phone": "1-888-000-0000",
+    "email": "info@in2itiveblinds.com",
+    "hours": "Monday-Friday: 9am-6pm, Saturday: 10am-4pm, Sunday: By appointment",
+    "showroom": "Mobile showroom - we bring samples to your home"
+  },
+  
+  "products": {
+    "roller_shades": {
+      "name": "Roller Shades",
+      "description": "Clean, modern window coverings that roll up smoothly. Perfect for contemporary spaces.",
+      "price_range": "$150-$400 per window",
+      "features": ["Blackout options", "Light filtering", "Motorization available", "Custom fabrics", "Child-safe cordless"],
+      "best_for": ["Bedrooms", "Living rooms", "Offices", "Media rooms"],
+      "installation_time": "30-45 minutes per window"
+    },
+    "venetian_blinds": {
+      "name": "Venetian Blinds",
+      "description": "Classic horizontal slat blinds offering precise light control and timeless style.",
+      "price_range": "$120-$350 per window",
+      "materials": ["Aluminum", "Wood", "Faux wood"],
+      "features": ["Adjustable slats", "Durable", "Easy to clean", "Multiple colors"],
+      "best_for": ["Kitchens", "Bathrooms", "Offices", "Any room"],
+      "installation_time": "20-30 minutes per window"
+    },
+    "vertical_blinds": {
+      "name": "Vertical Blinds",
+      "description": "Ideal for large windows and sliding glass doors with smooth operation.",
+      "price_range": "$200-$500 per door/window",
+      "features": ["Wide coverage", "Easy operation", "Multiple materials", "Custom widths"],
+      "best_for": ["Patio doors", "Large windows", "Office spaces"],
+      "installation_time": "45-60 minutes per installation"
+    },
+    "honeycomb_shades": {
+      "name": "Honeycomb (Cellular) Shades",
+      "description": "Energy-efficient shades with unique cellular design that insulates your windows.",
+      "price_range": "$180-$450 per window",
+      "features": ["Energy efficient", "Sound absorption", "Light filtering to blackout", "Top-down/bottom-up options"],
+      "best_for": ["Energy savings", "Noise reduction", "Bedrooms", "Living rooms"],
+      "energy_savings": "Up to 40% on heating/cooling costs",
+      "installation_time": "30-40 minutes per window"
+    },
+    "roman_shades": {
+      "name": "Roman Shades",
+      "description": "Elegant fabric shades that fold into beautiful pleats when raised.",
+      "price_range": "$250-$600 per window",
+      "features": ["Luxury fabrics", "Custom patterns", "Cordless options", "Motorization available"],
+      "best_for": ["Living rooms", "Dining rooms", "Bedrooms", "Formal spaces"],
+      "installation_time": "40-50 minutes per window"
+    },
+    "motorization": {
+      "name": "Motorized Blinds & Shades",
+      "description": "Smart home integration with voice control and app operation for ultimate convenience.",
+      "price_range": "$300-$800 per window (includes motor)",
+      "features": ["Voice control (Alexa, Google Home, Siri)", "Smartphone app", "Scheduling", "Battery or hardwired", "Remote control"],
+      "compatible_with": ["All roller shades", "Most honeycomb shades", "Roman shades"],
+      "installation_time": "60-90 minutes per window",
+      "smart_home": "Works with Alexa, Google Home, Apple HomeKit"
+    }
+  },
+  
+  "services": {
+    "free_consultation": {
+      "name": "Free In-Home Consultation",
+      "description": "Our design experts bring samples to your home and help you choose the perfect window coverings",
+      "duration": "60-90 minutes",
+      "includes": ["Full product samples", "Professional measurements", "Design recommendations", "Instant quotes"],
+      "cost": "Completely free, no obligation",
+      "booking": "Call 1-888-000-0000 or book online"
+    },
+    "professional_installation": {
+      "name": "Professional Installation",
+      "description": "Expert installation by certified technicians with lifetime warranty on workmanship",
+      "included": "Free with all purchases",
+      "timeline": "Typically 2-3 weeks from order to installation",
+      "warranty": "Lifetime warranty on installation workmanship"
+    },
+    "custom_manufacturing": {
+      "name": "Custom Manufacturing",
+      "description": "Every blind and shade is custom-made to your exact window measurements",
+      "turnaround": "10-14 business days",
+      "precision": "Measured to 1/8 inch accuracy",
+      "quality": "Factory-direct, no middleman"
+    }
+  },
+  
+  "pricing": {
+    "philosophy": "Factory-direct pricing - we manufacture our products, so you save 30-40% compared to retail stores",
+    "payment_options": ["Cash", "Credit card", "Debit", "Financing available"],
+    "financing": "0% financing available for 12 months on orders over $1000",
+    "price_match": "We'll beat any competitor's written quote by 10%",
+    "deposit": "50% deposit required at order, balance due on installation",
+    "typical_costs": {
+      "single_window": "$150-$400",
+      "whole_home_8_windows": "$1200-$3200",
+      "whole_home_15_windows": "$2250-$6000"
+    }
+  },
+  
+  "process": {
+    "step1": {
+      "title": "Book Free Consultation",
+      "description": "Schedule your free in-home consultation online or by phone",
+      "duration": "5 minutes"
+    },
+    "step2": {
+      "title": "Design Meeting",
+      "description": "Our expert visits your home with samples, measures windows, and provides instant quotes",
+      "duration": "60-90 minutes"
+    },
+    "step3": {
+      "title": "Custom Manufacturing",
+      "description": "Your blinds are custom-made to your exact specifications at our factory",
+      "duration": "10-14 business days"
+    },
+    "step4": {
+      "title": "Professional Installation",
+      "description": "Certified technicians install your new window coverings with lifetime warranty",
+      "duration": "2-4 hours for typical home"
+    }
+  },
+  
+  "warranties": {
+    "product_warranty": "Limited lifetime warranty on all products - covers defects in materials and workmanship",
+    "installation_warranty": "Lifetime warranty on installation workmanship",
+    "motorization_warranty": "5-year warranty on all motors and electronic components",
+    "what_covered": ["Manufacturing defects", "Hardware failures", "Installation issues", "Motor malfunctions"],
+    "what_not_covered": ["Normal wear and tear", "Damage from pets or accidents", "Improper use"]
+  },
+  
+  "film_production": {
+    "name": "Commercial Film & TV Production Services",
+    "description": "Specialized corded window coverings for film studios and commercial productions",
+    "why_corded": "Film and TV productions require corded blinds for precise control, silent operation, and authentic aesthetics",
+    "legal_compliance": "Available only for verified commercial use under SOR/2019-97 exemption",
+    "verification_required": ["Business registration", "Facility documentation", "Access control statement", "Production evidence", "Signed declaration"],
+    "products_available": ["Venetian blinds (corded)", "Vertical blinds (corded)", "Roman shades (corded)", "Roller shades (corded)", "Cellular shades (corded)", "Pleated shades (corded)"],
+    "contact": "Contact our commercial division for verification process and quotes"
+  },
+  
+  "faqs": {
+    "how_long_installation": "Installation typically takes 2-4 hours for an average home with 8-10 windows. Single windows take 20-45 minutes depending on product type.",
+    "do_you_measure": "Yes! Professional measuring is included free with your consultation. We measure to 1/8 inch accuracy.",
+    "what_if_wrong_size": "If we made an error in measuring or manufacturing, we'll remake and reinstall at no charge. That's our guarantee.",
+    "can_i_install_myself": "While possible, we include professional installation free with all purchases. Our installers are certified and provide lifetime warranty on workmanship.",
+    "how_long_to_manufacture": "Custom manufacturing takes 10-14 business days. Rush orders available for additional fee.",
+    "do_you_have_showroom": "We have a mobile showroom! We bring samples directly to your home so you can see how they look in your actual space and lighting.",
+    "what_areas_do_you_serve": "We serve all of Southern Ontario including Toronto, Mississauga, Brampton, Hamilton, Oakville, Burlington, Milton, and surrounding areas.",
+    "can_i_get_samples": "Yes! During your free consultation, we bring full-size samples so you can see and feel the actual products.",
+    "what_about_child_safety": "All our residential products are cordless or have child-safe features. We take child safety very seriously and comply with all Canadian safety regulations.",
+    "do_you_do_commercial": "Yes! We serve both residential and commercial clients. We also have specialized services for film/TV productions.",
+    "what_if_i_need_repairs": "Contact us and we'll send a technician. Warranty repairs are free. Out-of-warranty repairs are charged at reasonable rates.",
+    "can_i_clean_them": "Yes! Most blinds can be cleaned with a damp cloth or duster. We provide care instructions with every installation.",
+    "how_energy_efficient": "Honeycomb shades can save up to 40% on heating/cooling costs. All our products provide some insulation benefits.",
+    "what_about_smart_home": "Our motorized options work with Alexa, Google Home, and Apple HomeKit for full smart home integration."
+  },
+  
+  "common_questions": {
+    "best_for_bedroom": "For bedrooms, we recommend blackout roller shades or room-darkening honeycomb shades. Both provide excellent light control for better sleep.",
+    "best_for_privacy": "Top-down/bottom-up honeycomb shades or light-filtering roller shades offer privacy while still allowing natural light.",
+    "best_for_energy_savings": "Honeycomb (cellular) shades are the most energy-efficient, saving up to 40% on heating and cooling costs.",
+    "best_for_large_windows": "Vertical blinds or motorized roller shades work best for large windows and patio doors.",
+    "best_for_bathrooms": "Faux wood venetian blinds or moisture-resistant roller shades are ideal for humid bathroom environments.",
+    "best_for_kids_rooms": "Cordless roller shades or honeycomb shades - completely safe with no cords or chains.",
+    "most_popular": "Roller shades are our most popular product due to their clean look, versatility, and affordable pricing.",
+    "longest_lasting": "Faux wood venetian blinds and quality roller shades typically last 10-15+ years with proper care."
+  },
+  
+  "voice_assistant_personality": {
+    "tone": "Friendly, helpful, and knowledgeable. Professional but warm and approachable.",
+    "style": "Clear and concise. Avoid jargon. Explain technical terms when necessary.",
+    "approach": "Listen to customer needs first, then recommend appropriate solutions. Never pushy.",
+    "empathy": "Acknowledge customer concerns about cost, installation, or decision-making. Offer reassurance.",
+    "proactive": "Offer to schedule consultations, send information, or connect with specialists when appropriate."
+  }
+}

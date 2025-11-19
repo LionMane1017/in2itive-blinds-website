@@ -5,100 +5,150 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Card } from "@/components/ui/card";
-
-const faqs = [
-  {
-    question: "What happens if hardware fails?",
-    answer: "All ZimaBoard servers come with a standard manufacturer warranty. Additionally, we recommend maintaining a spare unit for critical deployments. Hardware failure rates for these enterprise-grade components are typically under 2% annually. With proper redundancy configuration in Proxmox, a single hardware failure won't impact service availability. Replacement units can be deployed within 24-48 hours."
-  },
-  {
-    question: "What kind of warranty coverage is included?",
-    answer: "ZimaBoard servers include a 1-year manufacturer warranty covering defects and hardware failures. Extended warranty options are available for purchase. The warranty covers replacement of defective units and technical support from the manufacturer. We recommend purchasing extended warranties for mission-critical deployments to ensure long-term protection."
-  },
-  {
-    question: "What technical support options are available?",
-    answer: "Technical support is available through multiple channels: manufacturer support for hardware issues, Proxmox community forums and documentation for software questions, and optional paid support contracts for enterprise-level assistance. Our feasibility study includes setup documentation and configuration guides. For organizations requiring dedicated support, we can connect you with certified Proxmox partners who offer 24/7 enterprise support packages."
-  },
-  {
-    question: "Can I scale beyond 10 servers?",
-    answer: "Absolutely. Proxmox clusters can scale to hundreds of nodes. The 10-server configuration in our study represents an optimal starting point for most small to medium enterprises. As your needs grow, you can add additional nodes to the cluster seamlessly. Proxmox supports live migration, allowing you to expand capacity without downtime. Larger deployments may benefit from additional networking infrastructure and centralized storage solutions."
-  },
-  {
-    question: "What about compliance certifications (SOC 2, HIPAA, etc.)?",
-    answer: "Proxmox itself doesn't hold certifications, but it provides the tools necessary to build compliant infrastructure. Many organizations use Proxmox in SOC 2, HIPAA, and PCI-DSS compliant environments. Compliance depends on your implementation: proper access controls, encryption, audit logging, and security hardening. We recommend working with a compliance consultant to ensure your specific deployment meets regulatory requirements. Proxmox's flexibility allows you to implement whatever security controls your compliance framework requires."
-  },
-  {
-    question: "How complex is the migration process?",
-    answer: "Migration complexity varies by workload. Simple web applications and databases can typically be migrated in days. More complex environments with legacy dependencies may take weeks. Proxmox supports multiple migration methods: P2V (physical to virtual), V2V (virtual to virtual), and containerization. Our study includes a migration planning guide. Most organizations use a phased approach, migrating non-critical workloads first to gain experience before moving production systems."
-  },
-  {
-    question: "What are the power and cooling requirements?",
-    answer: "ZimaBoard servers are extremely power-efficient, consuming only 6-15W per unit under typical load. A 10-server cluster draws approximately 100-150W total—less than two standard light bulbs. No special cooling infrastructure is required; standard office air conditioning is sufficient. The low power consumption is a major cost advantage over traditional servers and contributes significantly to the ROI calculations in our study."
-  },
-  {
-    question: "How does performance compare to cloud instances?",
-    answer: "ZimaBoard servers provide dedicated resources without the CPU throttling common in cloud environments. While individual core performance is modest, you get consistent, predictable performance. For workloads that benefit from multiple cores and don't require extreme single-thread performance, ZimaBoards often outperform similarly-priced cloud instances. The key advantage is no performance degradation during peak usage—you own the full capacity 24/7."
-  },
-  {
-    question: "What networking infrastructure do I need?",
-    answer: "Minimum requirements: a managed gigabit switch and stable internet connection. For production deployments, we recommend: redundant network switches, separate management and production networks, and quality firewall/router hardware. The networking investment is typically $500-2000 depending on redundancy requirements. All networking costs are included in our total cost of ownership calculations."
-  },
-  {
-    question: "Can I use this for production workloads?",
-    answer: "Yes, with proper planning. Many organizations run production workloads on Proxmox clusters. Key considerations: implement proper backup strategies, configure high availability for critical services, maintain spare hardware for quick replacement, and establish monitoring and alerting. The ZimaBoard platform is suitable for production use in small to medium deployments. For mission-critical applications, ensure you have redundancy at every layer."
-  }
-];
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { HelpCircle, Phone, Mail, MessageCircle } from "lucide-react";
+import { Link } from "wouter";
 
 export default function FAQ() {
   return (
     <>
       <SEO 
         title="Frequently Asked Questions"
-        description="Common questions about owned infrastructure, Proxmox deployment, hardware warranties, compliance, scaling, and migration complexity."
-        keywords="FAQ, infrastructure questions, Proxmox support, hardware warranty, compliance, scaling"
+        description="Get answers to common questions about blinds, shades, installation, motorization, and our services. Expert advice from In2itive Blinds."
+        keywords="blinds FAQ, window covering questions, installation guide, blinds maintenance, motorization questions"
       />
-      <div className="min-h-screen bg-background">
-        <div className="bg-primary/5 py-16">
+      
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-primary/5 via-background to-primary/5 py-20 border-b">
           <div className="container">
-            <h1 className="text-4xl font-bold mb-4">Frequently Asked Questions</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl">
-              Find answers to common questions about owned infrastructure, deployment, support, and compliance
-            </p>
-          </div>
-        </div>
-
-        <div className="container py-16">
-          <div className="max-w-4xl mx-auto">
-            <Card className="p-8">
-              <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="text-left text-lg font-semibold">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground leading-relaxed">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </Card>
-
-            <div className="mt-12 text-center">
-              <h2 className="text-2xl font-bold mb-4">Still have questions?</h2>
-              <p className="text-muted-foreground mb-6">
-                Contact our team for personalized answers to your infrastructure questions
+            <div className="max-w-3xl mx-auto text-center">
+              <HelpCircle className="h-16 w-16 mx-auto mb-6 text-primary" />
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
+              <p className="text-xl text-muted-foreground">
+                Find answers to common questions about our blinds, shades, and window covering services
               </p>
-              <a 
-                href="mailto:contact@wisemedia.com" 
-                className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
-              >
-                Contact Us
-              </a>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* FAQ Content */}
+        <section className="py-16 bg-background">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              
+              {/* General Questions */}
+              <div className="mb-12">
+                <h2 className="text-2xl font-bold mb-6">General Questions</h2>
+                <Accordion type="single" collapsible className="space-y-4">
+                  <AccordionItem value="item-1" className="border rounded-lg px-6">
+                    <AccordionTrigger className="text-left">
+                      Do you offer free consultations?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Yes! We provide complimentary in-home consultations where our design experts bring samples directly to you. We'll measure your windows, discuss your needs and style preferences, and provide a detailed quote—all at no cost and with no obligation.
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-2" className="border rounded-lg px-6">
+                    <AccordionTrigger className="text-left">
+                      What areas do you serve?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      We serve residential and commercial clients throughout Ontario, including Toronto, Mississauga, Brampton, Oakville, Burlington, Hamilton, and surrounding areas. Contact us to confirm service availability in your specific location.
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-3" className="border rounded-lg px-6">
+                    <AccordionTrigger className="text-left">
+                      How long does the process take from consultation to installation?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Typically 2-4 weeks. After your consultation and order confirmation, custom window treatments are manufactured to your exact specifications (usually 10-14 days). We then schedule professional installation at your convenience, which typically takes 2-4 hours depending on the number of windows.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+
+              {/* Products & Options */}
+              <div className="mb-12">
+                <h2 className="text-2xl font-bold mb-6">Products & Options</h2>
+                <Accordion type="single" collapsible className="space-y-4">
+                  <AccordionItem value="item-5" className="border rounded-lg px-6">
+                    <AccordionTrigger className="text-left">
+                      What's the difference between blinds and shades?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      <strong>Blinds</strong> have individual slats (horizontal or vertical) that can be tilted to control light. <strong>Shades</strong> are made from a single piece of material that rolls, folds, or pleats. Both offer excellent light control and privacy—the choice depends on your aesthetic preference and functional needs.
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-6" className="border rounded-lg px-6">
+                    <AccordionTrigger className="text-left">
+                      Which window treatments are best for energy efficiency?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      <strong>Honeycomb (cellular) shades</strong> are the most energy-efficient option, with air pockets that insulate against heat and cold. They can reduce energy costs by up to 20%. Other good options include thermal-backed roller shades and layered treatments like drapery over blinds.
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-7" className="border rounded-lg px-6">
+                    <AccordionTrigger className="text-left">
+                      Can any blind or shade be motorized?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Yes! Most window treatments can be motorized, including roller shades, honeycomb shades, vertical blinds, venetian blinds, and drapery. Motorization is especially popular for hard-to-reach windows, large windows, and smart home integration.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+
+              {/* Installation */}
+              <div className="mb-12">
+                <h2 className="text-2xl font-bold mb-6">Installation & Measurement</h2>
+                <Accordion type="single" collapsible className="space-y-4">
+                  <AccordionItem value="item-10" className="border rounded-lg px-6">
+                    <AccordionTrigger className="text-left">
+                      Do you provide professional measurement and installation?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Yes! Professional measurement and installation are included with all our custom window treatments. Our trained installers ensure perfect fit and operation.
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-12" className="border rounded-lg px-6">
+                    <AccordionTrigger className="text-left">
+                      What's the difference between inside mount and outside mount?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      <strong>Inside mount</strong> means the blinds fit inside the window frame for a clean look. <strong>Outside mount</strong> means the blinds are mounted on the wall above the window, making windows appear larger and providing better light blocking.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-16 bg-muted/50">
+          <div className="container">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl font-bold mb-4">Still Have Questions?</h2>
+              <p className="text-muted-foreground mb-8">
+                Our team is here to help! Reach out and we'll be happy to answer any questions.
+              </p>
+              <Link href="/contact-sales">
+                <Button size="lg">
+                  Schedule Free Consultation
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
       </div>
     </>
   );

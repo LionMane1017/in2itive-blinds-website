@@ -144,3 +144,5 @@ export function SEO({ title, description, keywords, ogImage, ogType = "website",
 
   return null;
 }
+
+export default SEO;

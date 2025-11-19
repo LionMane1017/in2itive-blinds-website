@@ -1,0 +1,12 @@
+{
+  "filmProduction": {
+    "heroTitle": "Absolute Light Control",
+    "heroSubtitle": "Cinema Grade Window Treatments",
+    "videos": {
+      "demo": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "motorized": "/videos/motorized.mp4",
+      "lifestyle": "/videos/lifestyle.mp4",
+      "cinema": "/videos/cinema.mp4"
+    }
+  }
+}
