@@ -1,7 +1,7 @@
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ProgressIndicator } from "@/components/ProgressIndicator";
-import { products, getProductIndex, getProductByPath } from "../../../lib/productData";
+import { products, getProductIndex, getProductByPath } from "../../lib/productData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
