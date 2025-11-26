@@ -4,9 +4,9 @@
     "heroSubtitle": "Cinema Grade Window Treatments",
     "videos": {
       "demo": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-      "motorized": "/videos/motorized.mp4",
-      "lifestyle": "/videos/lifestyle.mp4",
-      "cinema": "/videos/cinema.mp4"
+      "motorized": "https://pub-6e53d80e9e5d416cb5178f9587b3e00e.r2.dev/videos/motorized.mp4",
+      "lifestyle": "https://pub-6e53d80e9e5d416cb5178f9587b3e00e.r2.dev/videos/lifestyle.mp4",
+      "cinema": "https://pub-6e53d80e9e5d416cb5178f9587b3e00e.r2.dev/videos/cinema.mp4"
     }
   }
 }

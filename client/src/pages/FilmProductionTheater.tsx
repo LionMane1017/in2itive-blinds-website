@@ -72,7 +72,7 @@ const FilmProductionTheater = () => {
                 loop
                 muted={isMuted}
             >
-                <source src="/videos/film-demo.mp4" type="video/mp4" />
+                <source src="https://pub-6e53d80e9e5d416cb5178f9587b3e00e.r2.dev/videos/film-demo.mp4" type="video/mp4" />
             </video>
 
             {/* Custom Controls */}
