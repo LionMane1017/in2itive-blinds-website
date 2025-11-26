@@ -1,6 +1,3 @@
-import { ChevronRight, Home } from "lucide-react";
-import { Link } from "wouter";
-
 export interface Product {
   name: string;
   path: string;
