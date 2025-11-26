@@ -70,7 +70,7 @@ export default function ProductNavigator({ currentPath }: ProductNavigatorProps)
                     <div className="text-right">
                       <div className="text-lg">{nextProduct.icon}</div>
                       <div className="text-xs text-muted-foreground uppercase tracking-wider text-right">Next</div>
-                      <div className="text-sm font-semibold text-foreground text-right truncate">{nextProduct.name}</div>}],path:
+                      <div className="text-sm font-semibold text-foreground text-right truncate">{nextProduct.name}</div>
                     </div>
                     <ChevronRight className="w-6 h-6 text-primary group-hover:translate-x-1 transition-transform" />
                   </button>
