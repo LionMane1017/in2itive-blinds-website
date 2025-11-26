@@ -32,8 +32,8 @@ export default function ProductNavigator({ currentPath }: ProductNavigatorProps)
   const nextProduct = currentIndex < products.length - 1 ? products[currentIndex + 1] : null;
   
   return (
-    <div className="fixed top-1/2 -translate-y-1/2 left-0 right-0 pointer-events-none z-40">
-      <div className="container mx-auto px-4">
+    <div className="fixed bottom-0 left-0 right-0 pointer-events-none z-40 lg:hidden">
+      <div className="flex justify-between items-center w-full max-w-md mx-auto p-4">
         <div className="flex justify-between items-center">
           <AnimatePresence>
             {prevProduct && (
@@ -41,15 +41,15 @@ export default function ProductNavigator({ currentPath }: ProductNavigatorProps)
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="pointer-events-auto"
+                className="pointer-events-auto w-1/2"
               >
                 <Link href={prevProduct.path}>
-                  <button className="group flex items-center gap-3 px-6 py-4 rounded-r-2xl bg-background/80 backdrop-blur-xl border border-l-0 border-border/40 hover:bg-background/95 hover:border-primary/30 transition-all duration-300 shadow-lg hover:shadow-xl hover:pr-8">
+                  <button className="group flex items-center justify-start w-full gap-2 px-3 py-2 rounded-lg bg-background/90 backdrop-blur-md border border-border/40 hover:bg-background/95 transition-all duration-300 shadow-lg">
                     <ChevronLeft className="w-6 h-6 text-primary group-hover:-translate-x-1 transition-transform" />
                     <div className="text-left">
-                      <div className="text-2xl mb-1">{prevProduct.icon}</div>
-                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Previous</div>
-                      <div className="text-sm font-semibold text-foreground">{prevProduct.name}</div>
+                      <div className="text-lg">{prevProduct.icon}</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider text-left">Previous</div>
+                      <div className="text-sm font-semibold text-foreground text-left truncate">{prevProduct.name}</div>
                     </div>
                   </button>
                 </Link>
@@ -63,14 +63,14 @@ export default function ProductNavigator({ currentPath }: ProductNavigatorProps)
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                className="pointer-events-auto ml-auto"
+                className="pointer-events-auto w-1/2"
               >
                 <Link href={nextProduct.path}>
-                  <button className="group flex items-center gap-3 px-6 py-4 rounded-l-2xl bg-background/80 backdrop-blur-xl border border-r-0 border-border/40 hover:bg-background/95 hover:border-primary/30 transition-all duration-300 shadow-lg hover:shadow-xl hover:pl-8">
+                  <button className="group flex items-center justify-end w-full gap-2 px-3 py-2 rounded-lg bg-background/90 backdrop-blur-md border border-border/40 hover:bg-background/95 transition-all duration-300 shadow-lg">
                     <div className="text-right">
-                      <div className="text-2xl mb-1">{nextProduct.icon}</div>
-                      <div className="text-xs text-muted-foreground uppercase tracking-wider">Next</div>
-                      <div className="text-sm font-semibold text-foreground">{nextProduct.name}</div>
+                      <div className="text-lg">{nextProduct.icon}</div>
+                      <div className="text-xs text-muted-foreground uppercase tracking-wider text-right">Next</div>
+                      <div className="text-sm font-semibold text-foreground text-right truncate">{nextProduct.name}</div>}],path:
                     </div>
                     <ChevronRight className="w-6 h-6 text-primary group-hover:translate-x-1 transition-transform" />
                   </button>

@@ -1,4 +1,7 @@
 import SEO from "@/components/SEO";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { ProgressIndicator } from "@/components/ProgressIndicator";
+import { products, getProductIndex, getProductByPath } from "@/lib/productData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
@@ -6,9 +9,19 @@ import { Link } from "wouter";
 import ProductNavigator from "@/components/ProductNavigator";
 
 export default function RollerShades() {
+  const currentPath = "/products/roller-shades";
+  const currentIndex = getProductIndex(currentPath);
+  const currentProduct = getProductByPath(currentPath);
+  const totalProducts = products.length;
+
+  const breadcrumbItems = [
+    { label: "Products", href: "/products" },
+    { label: currentProduct?.name || "Roller Shades" },
+  ];
+
   return (
     <>
-      <ProductNavigator currentPath="/products/roller-shades" />
+      <ProductNavigator currentPath={currentPath} />
       <SEO 
         title="Roller Shades - Custom Window Shades Ontario"
         description="Premium custom roller shades in Ontario. Light-filtering, blackout, and motorized options available. Free consultation and professional installation."
@@ -19,6 +32,12 @@ export default function RollerShades() {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-b from-muted/50 to-background">
           <div className="container">
+            <Breadcrumb items={breadcrumbItems} />
+            <ProgressIndicator 
+              current={currentIndex + 1} 
+              total={totalProducts} 
+              sectionTitle="Product Overview" 
+            />
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-5xl font-bold mb-6">Roller Shades</h1>

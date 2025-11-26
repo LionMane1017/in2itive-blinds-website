@@ -1,4 +1,7 @@
 import { SEO } from "@/components/SEO";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { ProgressIndicator } from "@/components/ProgressIndicator";
+import { products, getProductIndex, getProductByPath } from "@/lib/productData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
@@ -6,6 +9,15 @@ import { Link } from "wouter";
 import ProductNavigator from "@/components/ProductNavigator";
 
 export default function Awnings() {
+  const currentPath = "/products/awnings";
+  const currentIndex = getProductIndex(currentPath);
+  const currentProduct = getProductByPath(currentPath);
+  const totalProducts = products.length;
+
+  const breadcrumbItems = [
+    { label: "Products", href: "/products" },
+    { label: currentProduct?.name || "Retractable Awnings" },
+  ];
   return (
     <>
       <ProductNavigator currentPath="/products/awnings" />
@@ -19,6 +31,12 @@ export default function Awnings() {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-b from-muted/50 to-background">
           <div className="container">
+            <Breadcrumb items={breadcrumbItems} />
+            <ProgressIndicator 
+              current={currentIndex + 1} 
+              total={totalProducts} 
+              sectionTitle="Product Overview" 
+            />
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-5xl font-bold mb-6">Retractable Awnings</h1>

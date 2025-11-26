@@ -244,7 +244,7 @@ const WiseWareAssistant = ({ onClose }: WiseWareAssistantProps = {}) => {
           backdropFilter: 'blur(15px) saturate(91%)',
           WebkitBackdropFilter: 'blur(15px) saturate(91%)',
         }}
-        className={`fixed bottom-24 left-6 z-40 w-[90vw] max-w-md h-[70vh] max-h-[600px] bg-white/10 border border-white/20 rounded-2xl shadow-2xl flex flex-col transition-all duration-300 ease-in-out ${
+        className={`fixed bottom-24 left-1/2 -translate-x-1/2 z-40 w-[90vw] max-w-md h-[70vh] max-h-[600px] bg-white/10 border border-white/20 rounded-2xl shadow-2xl flex flex-col transition-all duration-300 ease-in-out ${
           isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
         }`}
       >

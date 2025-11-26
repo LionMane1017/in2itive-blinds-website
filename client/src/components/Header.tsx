@@ -221,7 +221,17 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Resources Collapsible Section */}
+            {// Resources Collapsible Section
+            <div>
+              <Link
+                href="/film-production"
+                className="text-sm font-medium hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Film Production
+                <span className="text-xs bg-amber-500 text-white px-2 py-0.5 rounded font-bold ml-2">COMMERCIAL</span>
+              </Link>
+            </div> */}
             <div>
               <button
                 onClick={() => setResourcesExpanded(!resourcesExpanded)}
