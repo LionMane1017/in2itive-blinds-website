@@ -1,3 +1,4 @@
+// Product data structure for navigation and breadcrumbs
 export interface Product {
   name: string;
   path: string;
